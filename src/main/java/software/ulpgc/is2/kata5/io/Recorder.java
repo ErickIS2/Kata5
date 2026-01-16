@@ -7,3 +7,4 @@ import java.util.stream.Stream;
 public interface Recorder {
     void record(Stream<Movie> movies);
 }
+
