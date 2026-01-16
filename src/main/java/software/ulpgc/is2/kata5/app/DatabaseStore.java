@@ -28,7 +28,7 @@ public class DatabaseStore implements Store {
         }
     }
 
-    private Object nextMovie(ResultSet rs) {
+    private Movie nextMovie(ResultSet rs) {
         try{
             if(!rs.next()) return null;
             String title = rs.getString("title");
