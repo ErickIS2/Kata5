@@ -18,14 +18,7 @@ public class DatabaseRecorder implements Recorder {
     public DatabaseRecorder(Connection connection) throws SQLException {
         this.connection = connection;
         this.preparedStatement = connection.prepareStatement(
-                "INSERT INTO movies (title, duration, year) VALUES (?, ?, ?, ?)"
-        );
-    }
-
-    private void createTableIfNotExists() throws SQLException {
-        connection.createStatement().execute(
-                "CREATE TABLE IF NOT EXISTS movies (" +
-                        "title TEXT, duration INTEGER, year INTEGER)"
+                "INSERT INTO movies (title, duration, year) VALUES (?, ?, ?)"
         );
     }
 
